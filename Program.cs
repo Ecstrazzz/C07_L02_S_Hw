@@ -58,19 +58,49 @@
 //
 // Решение:
 //
-Console.WriteLine("Введите число отрезка [10, 99]: ");   // 86
+// Console.WriteLine("Введите число отрезка [10, 99]: ");   // 86, 10, 121, 6
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// if (num > 9 && num < 100)
+// {
+//     int num1 = num / 10;
+//     int num2 = num % 10;
+//     if (num1 > num2)
+//     {
+//         Console.WriteLine("Наибольшая цифра числа = " + num1);
+//     }
+//     else
+//         Console.WriteLine("Наибольшая цифра числа = " + num2);
+// }
+// else
+//     Console.WriteLine("Число выходит за переделы отрезка");
+//
+// Задача 4: Напишите программу, которая на вход принимает натуральное
+// число N, а на выходе показывает его цифры через запятую.
+//
+// Решение:
+//
+Console.WriteLine("Введите натуральное число N: ");   // 486, 78269, 15, 6
 int num = Convert.ToInt32(Console.ReadLine());
 
-if (num > 9 && num < 100)
+if (num < 10)
 {
-    int num1 = num / 10;
-    int num2 = num % 10;
-    if (num1 > num2)
-    {
-        Console.WriteLine("Наибольшая цифра числа = " + num1);
-    }
-    else
-        Console.WriteLine("Наибольшая цифра числа = " + num2);
+    Console.WriteLine("Число N состоит из цифр: " + num);
 }
 else
-    Console.WriteLine("Число выходит за переделы отрезка");
+{
+    Console.Write("Число N состоит из цифр: ");
+    while (num > 0)
+    {
+        int current = num % 10;
+        num /= 10;
+        if (num > 0)
+        {
+            Console.Write(current + ", ");
+        }
+        else
+        {
+            Console.Write(current);
+        }
+    }
+}
