@@ -7,18 +7,48 @@
 // 
 // Решение:
 //
-Console.WriteLine("Введите число: ");   // 161, 322, 483 - кратные числа
-int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число: ");   // 161, 322, 483 - кратные числа
+// int num = Convert.ToInt32(Console.ReadLine());
 
-int num1 = num % 7;
-int num2 = num % 23;
+// int num1 = num % 7;
+// int num2 = num % 23;
 
-if (num1 == 0 && num2 == 0)
+// if (num1 == 0 && num2 == 0)
+// {
+//     Console.WriteLine($"Введенное число {num} кратно числам 7 и 23");
+// }
+// else
+// {
+//     Console.WriteLine($"Введеное число {num} НЕ кратно числам 7 и 23");
+//     Console.WriteLine($"Остаток от чисел {num1} и {num2}");
+// }
+//
+// Задача 2: Напишите программу, которая принимает на вход
+// координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт
+// номер координатной четверти плоскости, в которой находится эта точка.
+//
+// Решение:
+//
+Console.WriteLine("Введите координаты точки X:");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координаты точки Y:");
+int y = Convert.ToInt32(Console.ReadLine());
+
+if (x > 0 && y > 0)
 {
-    Console.WriteLine($"Введенное число {num} кратно числам 7 и 23");
+    Console.WriteLine("Номер координатной четверти плоскости = 1");
+}
+else if (x < 0 && y > 0)
+{
+    Console.WriteLine("Номер координатной четверти плоскости = 2");
+}
+else if (x < 0 && y < 0)
+{
+    Console.WriteLine("Номер координатной четверти плоскости = 3");
+}
+else if (x > 0 && y < 0)
+{
+    Console.WriteLine("Номер координатной четверти плоскости = 4");
 }
 else
-{
-    Console.WriteLine($"Введеное число {num} НЕ кратно числам 7 и 23");
-    Console.WriteLine($"Остаток от чисел {num1} и {num2}");
-}
+    Console.WriteLine("Точка находится на нулевых координатах");
