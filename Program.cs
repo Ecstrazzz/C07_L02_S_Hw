@@ -29,26 +29,48 @@
 //
 // Решение:
 //
-Console.WriteLine("Введите координаты точки X:");
-int x = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите координаты точки Y:");
-int y = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координаты точки X:");
+// int x = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координаты точки Y:");
+// int y = Convert.ToInt32(Console.ReadLine());
 
-if (x > 0 && y > 0)
+// if (x > 0 && y > 0)
+// {
+//     Console.WriteLine("Номер координатной четверти плоскости = 1");
+// }
+// else if (x < 0 && y > 0)
+// {
+//     Console.WriteLine("Номер координатной четверти плоскости = 2");
+// }
+// else if (x < 0 && y < 0)
+// {
+//     Console.WriteLine("Номер координатной четверти плоскости = 3");
+// }
+// else if (x > 0 && y < 0)
+// {
+//     Console.WriteLine("Номер координатной четверти плоскости = 4");
+// }
+// else
+//     Console.WriteLine("Точка находится на нулевых координатах");
+//
+// Задача 3: Напишите программу, которая принимает на вход целое число
+// из отрезка [10, 99] и показывает наибольшую цифру числа.
+//
+// Решение:
+//
+Console.WriteLine("Введите число отрезка [10, 99]: ");   // 86
+int num = Convert.ToInt32(Console.ReadLine());
+
+if (num > 9 && num < 100)
 {
-    Console.WriteLine("Номер координатной четверти плоскости = 1");
-}
-else if (x < 0 && y > 0)
-{
-    Console.WriteLine("Номер координатной четверти плоскости = 2");
-}
-else if (x < 0 && y < 0)
-{
-    Console.WriteLine("Номер координатной четверти плоскости = 3");
-}
-else if (x > 0 && y < 0)
-{
-    Console.WriteLine("Номер координатной четверти плоскости = 4");
+    int num1 = num / 10;
+    int num2 = num % 10;
+    if (num1 > num2)
+    {
+        Console.WriteLine("Наибольшая цифра числа = " + num1);
+    }
+    else
+        Console.WriteLine("Наибольшая цифра числа = " + num2);
 }
 else
-    Console.WriteLine("Точка находится на нулевых координатах");
+    Console.WriteLine("Число выходит за переделы отрезка");
